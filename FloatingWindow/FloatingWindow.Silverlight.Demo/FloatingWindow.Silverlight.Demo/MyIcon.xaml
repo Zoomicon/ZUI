@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="FloatingWindowControl.MyIcon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="150" Height="101" RenderTransformOrigin="0.5,0.5">
+
+    <Border x:Name="LayoutRoot" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top">
+		<Canvas Height="101" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
+			<Ellipse Height="82" Canvas.Top="19" Width="149" Stroke="#BFA9D6FF">
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+						<GradientStop Color="#800084FF" Offset="1"/>
+						<GradientStop Color="#FF0E6AC0"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+			<Ellipse Height="76" Width="149" Stroke="#CBC8E2FB">
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+						<GradientStop Color="#80B1D9FF" Offset="1"/>
+						<GradientStop Color="#FF0E6AC0"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+			<Path Data="M0.5,0.5 L0.60507488,0.5 L0.71577644,1.3852654 C3.6230273,20.747787 35.546665,36 74.5,36 C113.45333,36 145.37697,20.747787 148.28423,1.3852654 L148.39493,0.5 L148.5,0.5 L148.5,20 L148.48843,20 L148.5,20.5 C148.5,42.867531 115.36907,61 74.5,61 C33.630928,61 0.5,42.867531 0.5,20.5 L0.51156163,20 L0.5,20 z" Height="61.5" Stretch="Fill" Stroke="#CDA9CFF3" Canvas.Top="39" UseLayoutRounding="False" Width="149">
+				<Path.Fill>
+					<LinearGradientBrush EndPoint="0.98,0.421" MappingMode="RelativeToBoundingBox" StartPoint="0.005,0.384">
+						<GradientStop Color="#804283C0"/>
+						<GradientStop Color="#800E5FAB" Offset="1"/>
+						<GradientStop Color="#B1FFFFFF" Offset="0.308"/>
+					</LinearGradientBrush>
+				</Path.Fill>
+			</Path>
+			<Path Data="M6.75,59.75 L74.75,46.25 L55.25,82.25 L54.875,106.875 C36.625,103.5 20.875,98.625 6.625,83.25 C6.625,83.25 6.75,59.75 6.75,59.75 z" Height="61.625" Canvas.Left="5.125" Stretch="Fill" Stroke="#CBC8E2FB" Canvas.Top="37.25" UseLayoutRounding="False" Width="69.125">
+				<Path.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+						<GradientStop Color="#80EDB1FF" Offset="0.996"/>
+						<GradientStop Color="#6DC00EA9"/>
+					</LinearGradientBrush>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+	</Border>
+</UserControl>

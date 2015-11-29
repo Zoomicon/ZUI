@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24627.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{27B0C3BF-B244-478B-90A3-B39BC997F285}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{760B5104-37F8-4671-BC8E-EA2309F847A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Silverlight", "ZoomAndPan\ZoomAndPan.Silverlight\ZoomAndPan.Silverlight.csproj", "{8E75887A-A164-41B8-86D5-8DC37768B5A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindowZUI.Silverlight", "FloatingWindowZUI\FloatingWindowZUI.Silverlight\FloatingWindowZUI.Silverlight.csproj", "{D7D67F52-7B9B-4DE5-9B72-534664F296B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight", "FloatingWindow\FloatingWindow.Silverlight\FloatingWindow.Silverlight.csproj", "{3F3D3C8C-9724-4531-A04D-B92049F64686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.WPF", "FloatingWindow\FloatingWindow.WPF\FloatingWindow.WPF.csproj", "{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.WPF", "ZoomAndPan\ZoomAndPan.WPF\ZoomAndPan.WPF.csproj", "{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindowZUI.WPF", "FloatingWindowZUI\FloatingWindowZUI.WPF\FloatingWindowZUI.WPF.csproj", "{B467CD19-5D56-46FF-B3CA-10FE778F36E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B9582AD-8B35-42EB-8326-7902F4BE7705}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{C5EAC13A-E17A-4713-AA3B-53754BF1FC44}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet\ZUI.nuspec = NuGet\ZUI.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E75887A-A164-41B8-86D5-8DC37768B5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E75887A-A164-41B8-86D5-8DC37768B5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E75887A-A164-41B8-86D5-8DC37768B5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E75887A-A164-41B8-86D5-8DC37768B5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D67F52-7B9B-4DE5-9B72-534664F296B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D67F52-7B9B-4DE5-9B72-534664F296B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D67F52-7B9B-4DE5-9B72-534664F296B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D67F52-7B9B-4DE5-9B72-534664F296B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3D3C8C-9724-4531-A04D-B92049F64686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3D3C8C-9724-4531-A04D-B92049F64686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3D3C8C-9724-4531-A04D-B92049F64686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3D3C8C-9724-4531-A04D-B92049F64686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B467CD19-5D56-46FF-B3CA-10FE778F36E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B467CD19-5D56-46FF-B3CA-10FE778F36E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B467CD19-5D56-46FF-B3CA-10FE778F36E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B467CD19-5D56-46FF-B3CA-10FE778F36E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E75887A-A164-41B8-86D5-8DC37768B5A3} = {27B0C3BF-B244-478B-90A3-B39BC997F285}
+		{D7D67F52-7B9B-4DE5-9B72-534664F296B7} = {27B0C3BF-B244-478B-90A3-B39BC997F285}
+		{3F3D3C8C-9724-4531-A04D-B92049F64686} = {27B0C3BF-B244-478B-90A3-B39BC997F285}
+		{7C67AC53-E3BC-4482-8DFB-4CBAA644D280} = {760B5104-37F8-4671-BC8E-EA2309F847A8}
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934} = {760B5104-37F8-4671-BC8E-EA2309F847A8}
+		{B467CD19-5D56-46FF-B3CA-10FE778F36E9} = {760B5104-37F8-4671-BC8E-EA2309F847A8}
+	EndGlobalSection
+EndGlobal

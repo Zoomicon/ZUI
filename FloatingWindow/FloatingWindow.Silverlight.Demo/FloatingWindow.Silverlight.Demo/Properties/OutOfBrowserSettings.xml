@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="FloatingWindow.Silverlight.Demo Application" EnableGPUAcceleration="True" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>FloatingWindow.Silverlight.Demo Application on your desktop; at home, at work or on the go.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="FloatingWindow.Silverlight.Demo Application" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

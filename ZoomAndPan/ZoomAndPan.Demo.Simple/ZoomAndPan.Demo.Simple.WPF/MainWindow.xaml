@@ -1,0 +1,141 @@
+﻿<Window x:Class="ZoomAndPanSample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ZoomAndPanSample"
+    xmlns:ZoomAndPan="clr-namespace:ZoomAndPan;assembly=ZoomAndPan"
+    Title="Main Window" 
+    Height="600" 
+    Width="800"
+    Loaded="MainWindow_Loaded"
+    FocusManager.FocusedElement="{Binding ElementName=scroller}"
+    >
+    <Window.Resources>
+        
+        <!-- UI commands. -->
+        <RoutedUICommand x:Key="Commands.ZoomOut" />
+        <RoutedUICommand x:Key="Commands.ZoomIn" />
+
+    </Window.Resources>
+    
+    <Window.InputBindings>
+        
+        <!--
+        Bind keys to commands.
+        -->
+        <KeyBinding
+			Key="Minus"
+			Command="{StaticResource Commands.ZoomOut}"
+			/>
+        <KeyBinding
+			Key="Plus"
+			Command="{StaticResource Commands.ZoomIn}"
+			/>
+
+    </Window.InputBindings>
+    
+    <Window.CommandBindings>
+
+        <!--
+        Bind commands to event handlers.
+        -->
+        <CommandBinding 
+            Command="{StaticResource Commands.ZoomOut}" 
+            Executed="ZoomOut_Executed" 
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.ZoomIn}" 
+            Executed="ZoomIn_Executed" 
+            />
+
+    </Window.CommandBindings>
+
+    <!--
+    Wrap the ZoomAndPanControl in a ScrollViewer.
+    When the scaled content that is displayed in ZoomAndPanControl is larger than the viewport onto the content
+    ScrollViewer's scrollbars can be used to manipulate the offset of the viewport.    
+    -->
+    <ScrollViewer
+        x:Name="scroller"
+        CanContentScroll="True"
+        VerticalScrollBarVisibility="Visible"
+        HorizontalScrollBarVisibility="Visible"
+        >
+
+        <!--
+        This is the control that handles zooming and panning.
+        -->
+        <ZoomAndPan:ZoomAndPanControl                
+            x:Name="zoomAndPanControl"
+            Background="LightGray"
+            MouseDown="zoomAndPanControl_MouseDown"
+            MouseUp="zoomAndPanControl_MouseUp"
+            MouseMove="zoomAndPanControl_MouseMove"
+            MouseWheel="zoomAndPanControl_MouseWheel"
+            >
+            
+            <!--
+            This Canvas is the content that is displayed by the ZoomAndPanControl.
+            Width and Height determine the size of the content.
+            -->
+            <Canvas
+                x:Name="content"
+                Width="2000"
+                Height="2000"
+                Background="White"
+                >
+
+                <!--
+                Add some rectangles that the user can drag about.
+                -->
+                <Rectangle
+                    Canvas.Left="50"
+                    Canvas.Top="50"
+                    Width="80"
+                    Height="150"
+                    Fill="Blue"
+                    Cursor="Hand"
+                    MouseDown="Rectangle_MouseDown"
+                    MouseUp="Rectangle_MouseUp"
+                    MouseMove="Rectangle_MouseMove"
+                    />
+                <Rectangle
+                    Canvas.Left="550"
+                    Canvas.Top="350"
+                    Width="80"
+                    Height="150"
+                    Fill="Green"
+                    Cursor="Hand"
+                    MouseDown="Rectangle_MouseDown"
+                    MouseUp="Rectangle_MouseUp"
+                    MouseMove="Rectangle_MouseMove"
+                    />
+                <Rectangle
+                    Canvas.Left="850"
+                    Canvas.Top="850"
+                    Width="30"
+                    Height="20"
+                    Fill="Purple"
+                    Cursor="Hand"
+                    MouseDown="Rectangle_MouseDown"
+                    MouseUp="Rectangle_MouseUp"
+                    MouseMove="Rectangle_MouseMove"
+                    />
+                <Rectangle
+                    Canvas.Left="1850"
+                    Canvas.Top="1850"
+                    Width="80"
+                    Height="150"
+                    Fill="Red"
+                    Cursor="Hand"
+                    MouseDown="Rectangle_MouseDown"
+                    MouseUp="Rectangle_MouseUp"
+                    MouseMove="Rectangle_MouseMove"
+                    />
+
+            </Canvas>
+            
+        </ZoomAndPan:ZoomAndPanControl>
+
+    </ScrollViewer>
+
+</Window>

@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="TestZoom.Controls.HAEZoomingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:TestZoom.Controls"
+             xmlns:ZoomAndPan="clr-namespace:ZoomAndPan;assembly=ZoomAndPan"
+             Height="700"
+             Width="1000" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="pageBackground"
+                             EndPoint="0,1"
+                             StartPoint="1,0">
+            <GradientStop Color="#FFDD85"
+                          Offset="0" />
+            <GradientStop Color="#FFDD85"
+                          Offset="1" />
+            <GradientStop Color="#FEF7E0"
+                          Offset="0.35" />
+            <GradientStop Color="#FFEEBE"
+                          Offset="0.5" />
+            <GradientStop Color="#FEF7E0"
+                          Offset="0.75" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="popupBackground"
+                             EndPoint="0,1"
+                             StartPoint="1,0">
+            <GradientStop Color="#757575"
+                          Offset="0" />
+            <GradientStop Color="#757575"
+                          Offset="1" />
+            <GradientStop Color="#808080"
+                          Offset="0.35" />
+            <GradientStop Color="#757575"
+                          Offset="0.5" />
+            <GradientStop Color="#808080"
+                          Offset="0.75" />
+        </LinearGradientBrush>
+        <local:ScaleToPercentConverter x:Key="scaleToPercentConverter" />
+        <local:ColorToBrushConverter x:Key="colorToBrushConverter" />
+        <local:DataModel x:Key="TypeProvider" />
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ZoomAndPan:ZoomAndPanControl Grid.Row="0"
+                                      x:Name="zoomAndPanControl"
+                                      ContentScale="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentScale, Mode=TwoWay}"
+                                      ContentOffsetX="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentOffsetX, Mode=TwoWay}"
+                                      ContentOffsetY="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentOffsetY, Mode=TwoWay}"
+                                      ContentViewportWidth="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentViewportWidth, Mode=TwoWay}"
+                                      ContentViewportHeight="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentViewportHeight, Mode=TwoWay}"
+                                      Background="{StaticResource pageBackground}"
+                                      MouseMove="zoomAndPanControl_MouseMove"
+                                      MouseWheel="zoomAndPanControl_MouseWheel"
+                                      MouseLeftButtonDown="zoomAndPanControl_MouseLeftButtonDown"
+                                      MouseLeftButtonUp="zoomAndPanControl_MouseLeftButtonUp">
+            <Grid Width="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentWidth}"
+                  Height="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentHeight}">
+          <Image x:Name="content"
+                       Source="{Binding ImgSource}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"></Image>
+                <Canvas x:Name="dragZoomCanvas"
+                        Visibility="Collapsed">
+                    <Border x:Name="dragZoomBorder"
+                            BorderBrush="Black"
+                            BorderThickness="3"
+                            Background="Silver"
+                            CornerRadius="3"
+                            Opacity="0" />
+                </Canvas>
+            </Grid>
+        </ZoomAndPan:ZoomAndPanControl>
+        <Grid Grid.Row="1"
+              Margin="5,5,5,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="15" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!---->
+            <Button x:Name="btnFill"
+                Grid.Column="1"
+                Click="btnFill_Click"
+                >
+                Fill
+            </Button>
+
+            <Button x:Name="btn100"
+                Grid.Column="3"
+                Click="btn100_Click"
+                >
+                100%
+            </Button>
+            <!-- -->
+            <!---->
+                <TextBlock Grid.Column="5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Text="{Binding ElementName=zoomAndPanControl, Path=ContentScale, Converter={StaticResource scaleToPercentConverter}}" />
+            <TextBlock Grid.Column="6"
+                       VerticalAlignment="Center"
+                       Text="%" />
+            <!-- -->
+            <Button x:Name="btnZoomOut"
+                    Grid.Column="8"
+                    Click="btnZoomOut_Click">-</Button>
+            <Slider Grid.Column="10"
+                    x:Name="changeSlider"
+                    Minimum="{Binding MinPercentage}"
+                    Maximum="{Binding MaxPercentage}"                   
+                    Value="{Binding ElementName=zoomAndPanControl, Path=ContentScale, Converter={StaticResource scaleToPercentConverter},Mode=TwoWay}" />
+            <Button x:Name="btnZoomIn"
+                    Grid.Column="12"
+                    Click="btnZoomIn_Click">+</Button>
+        </Grid>
+        <Popup x:Name="MyPOP"
+               MouseLeftButtonDown="MyPOP_MouseLeftButtonDown"
+               IsOpen="False">
+            <StackPanel Width="200"
+                        Height="200">
+                <ZoomAndPan:ZoomAndPanControl x:Name="overview"
+                                              Width="200"
+                                              Height="200"
+                                              Background="{StaticResource popupBackground}"
+                                              SizeChanged="overview_SizeChanged"
+                                              Opacity="0.9">
+                    <Grid Width="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentWidth,Mode=TwoWay}"
+                          Height="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentHeight,Mode=TwoWay}"
+                          SizeChanged="overview_SizeChanged">
+                        <Image x:Name="content2"
+                               Source="{Binding ImgSource}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"></Image>
+                        <Canvas>
+                            <Thumb x:Name="overviewZoomRectThumb"
+                                   Canvas.Left="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentOffsetX, Mode=TwoWay}"
+                                   Canvas.Top="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentOffsetY, Mode=TwoWay}"
+                                   Width="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentViewportWidth, Mode=TwoWay}"
+                                   Height="{Binding Source={StaticResource TypeProvider}, Path=Instance.ContentViewportHeight, Mode=TwoWay}"
+                                   DragDelta="overviewZoomRectThumb_DragDelta"
+                                   Opacity="0.5">
+                                <Thumb.Template>
+                                    <ControlTemplate TargetType="Thumb">
+                                        <Border BorderBrush="Black"
+                                                BorderThickness="3"
+                                                Background="Yellow"
+                                                CornerRadius="3" />
+                                    </ControlTemplate>
+                                </Thumb.Template>
+                            </Thumb>
+                        </Canvas>
+                    </Grid>
+                </ZoomAndPan:ZoomAndPanControl>
+            </StackPanel>
+        </Popup>
+    </Grid>
+</UserControl>

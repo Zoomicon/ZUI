@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZoomAndPan.AnimationHelper">
+    <Position X="3.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Dropbox\ClipFlairDev\ClipFlair_Source\Client\ZUI\ZoomAndPan\Source\AnimationHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZoomAndPan.ZoomAndPanControl" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gMouZNYIQBfDgKKsBYFKAM2dGxWfF4yVKCETsgojgIQ=</HashCode>
+      <FileName>C:\Dropbox\ClipFlairDev\ClipFlair_Source\Client\ZUI\ZoomAndPan\Source\ZoomAndPanControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Enum Name="ZoomAndPan.MouseHandlingMode">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAABAAQAAAAAAAAAAAAAAAAAAAACAEAAAA=</HashCode>
+      <FileName>C:\Dropbox\ClipFlairDev\ClipFlair_Source\Client\ZUI\ZoomAndPan\Source\MouseHandlingMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
