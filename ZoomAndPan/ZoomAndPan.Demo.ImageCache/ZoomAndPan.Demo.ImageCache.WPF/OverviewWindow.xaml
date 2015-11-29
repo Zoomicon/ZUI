@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="ZoomAndPanSample.OverviewWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ZoomAndPanSample"
+    xmlns:ZoomAndPan="clr-namespace:ZoomAndPan;assembly=ZoomAndPan"
+
+    MouseDown="Window_MouseDown"
+    >
+    <UserControl.Resources>
+        
+        <!-- 
+        Converts a color value to a brush.
+        -->
+        <local:ColorToBrushConverter 
+            x:Key="colorToBrushConverter"
+            />
+
+
+
+    </UserControl.Resources>
+    
+    <!--
+    Embed a zoom and pan control.
+    This is used so that we can scale the content to fit the overview window,
+    therefore we see an overview of all of the content at once.
+    -->
+    <ZoomAndPan:ZoomAndPanControl
+        x:Name="overview"
+        Background="LightGray"
+        SizeChanged="overview_SizeChanged"
+        >
+        
+        <!-- 
+        This is the content that is displayed.
+        -->
+        <Grid
+            
+            >
+            <!--
+             Width="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentWidth}"
+             Height="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentHeight}"
+            -->
+
+            <Image x:Name="content" Source="world3.jpg" />
+
+            <!--
+            This Canvas and Border are used to draw the 'overview' zoom rect. 
+            This show the area of the content that is being viewed in the main window.
+            -->
+            <Canvas>
+                <Thumb
+                    x:Name="overviewZoomRectThumb"
+                    Canvas.Left="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentOffsetX, Mode=TwoWay}"
+                    Canvas.Top="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentOffsetY, Mode=TwoWay}"
+                    Width="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentViewportWidth}"
+                    Height="{Binding Source={x:Static local:DataModel.Instance}, Path=ContentViewportHeight}"
+                    DragDelta="overviewZoomRectThumb_DragDelta"
+                    Opacity="0.8"
+                    >
+                    <Thumb.Template>
+                        <ControlTemplate 
+                            TargetType="{x:Type Thumb}"
+                            >
+                            
+                            <Border 
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                                Background="Red"
+                                CornerRadius="1"                                        
+                                />
+                            
+                        </ControlTemplate>
+                    </Thumb.Template>
+                </Thumb>
+            </Canvas>                             
+            
+        </Grid>                        
+    </ZoomAndPan:ZoomAndPanControl>
+
+</UserControl>

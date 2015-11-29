@@ -1,0 +1,21 @@
+﻿<!-- 
+Filename: WindowWithIcon.xaml
+Version: 20120911
+-->
+  
+<my:FloatingWindow x:Class="FloatingWindowZUI.Demo.WindowWithIcon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:SilverFlow.Controls;assembly=SilverFlow.Controls"
+    IconText="Window's Icon" Title="Window with Icon"
+    Width="250" Height="200">
+
+    <my:FloatingWindow.Icon >
+        <Image Source="Images/computer.png" Width="48" Height="48"></Image>
+    </my:FloatingWindow.Icon>
+
+    <Grid x:Name="LayoutRoot">
+        <Image Stretch="None" Source="Images/computer.png" />
+    </Grid>
+</my:FloatingWindow>

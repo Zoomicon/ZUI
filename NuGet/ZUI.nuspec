@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+
+  <metadata>
+    <id>ZUI</id>
+    <version>1.0.0</version>
+    <title>ZUI</title>
+    <authors>birbilis, pankov</authors>
+    <owners>birbilis</owners>
+    <licenseUrl>https://github.com/Zoomicon/ZUI/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/Zoomicon/ZUI</projectUrl>
+    <iconUrl>http://zoomicon.com/logo.jpg</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <description>Zoomable Container hosting Floating Windows with Zoomable Content</description>
+    <releaseNotes />
+    <copyright>Copyright 2015</copyright>
+    <tags>Windows Floating Container ZUI Zoom</tags>
+
+    <dependencies>
+      <group targetFramework=".NETFramework4.0-client">
+        <dependency id="Compatibility" version="1.0.1" />
+        <dependency id="WPFToolkit" version="3.5.50211.1" />
+        <dependency id="Extended.Wpf.Toolkit" version="2.5.0" />
+      </group>
+    </dependencies>
+
+  </metadata>
+
+  <files>
+    <!-- Silverlight 5 -->
+    <file src="..\ZoomAndPan\ZoomAndPan.Silverlight\Bin\Release\ZoomAndPan.dll" target="lib\sl5\ZoomAndPan.dll" />
+    <file src="..\FloatingWindow\FloatingWindow.Silverlight\Bin\Release\SilverFlow.Controls.dll" target="lib\sl5\SilverFlow.Controls.dll" />
+    <file src="..\FloatingWindowZUI\FloatingWindowZUI.Silverlight\Bin\Release\FloatingWindowZUI.dll" target="lib\sl5\FloatingWindowZUI.dll" />
+    <file src="..\FloatingWindow\FloatingWindow.Silverlight\Bin\Release\FJ.Core.dll" target="lib\sl50\FJ.Core.dll" />
+    <!-- WPF -->
+    <file src="..\ZoomAndPan\ZoomAndPan.WPF\Bin\Release\ZoomAndPan.dll" target="lib\net40-client\ZoomAndPan.dll" />
+    <file src="..\FloatingWindow\FloatingWindow.WPF\Bin\Release\SilverFlow.Controls.dll" target="lib\net40-client\SilverFlow.Controls.dll" />
+    <file src="..\FloatingWindowZUI\FloatingWindowZUI.WPF\Bin\Release\FloatingWindowZUI.dll" target="lib\net40-client\FloatingWindowZUI.dll" />
+  </files>
+
+</package>
