@@ -113,6 +113,7 @@
           </LinearGradientBrush>
         </my:FloatingWindowHostZUI.Background>
       </my:FloatingWindowHostZUI>
+      
     </Grid>
   </Grid>
 </Window>
