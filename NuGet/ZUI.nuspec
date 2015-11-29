@@ -3,7 +3,7 @@
 
   <metadata>
     <id>ZUI</id>
-    <version>1.0.0</version>
+    <version>1.0.3</version>
     <title>ZUI</title>
     <authors>birbilis, pankov</authors>
     <owners>birbilis</owners>
@@ -18,10 +18,11 @@
     <tags>Windows Floating Container ZUI Zoom</tags>
 
     <dependencies>
-      <group targetFramework=".NETFramework4.0-client">
-        <dependency id="Compatibility" version="1.0.1" />
-        <dependency id="WPFToolkit" version="3.5.50211.1" />
-        <dependency id="Extended.Wpf.Toolkit" version="2.5.0" />
+      <group targetFramework="sl5">
+        <dependency id="Compatibility" version="1.0.2" />
+      </group>
+      <group targetFramework="net40-client">
+        <dependency id="Compatibility" version="1.0.2" />
       </group>
     </dependencies>
 
