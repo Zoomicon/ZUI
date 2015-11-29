@@ -3,7 +3,7 @@
 
   <metadata>
     <id>ZUI</id>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <title>ZUI</title>
     <authors>birbilis, pankov</authors>
     <owners>birbilis</owners>
@@ -18,10 +18,11 @@
     <tags>Windows Floating Container ZUI Zoom</tags>
 
     <dependencies>
-      <group targetFramework=".NETFramework4.0-client">
-        <dependency id="Compatibility" version="1.0.1" />
-        <dependency id="WPFToolkit" version="3.5.50211.1" />
-        <dependency id="Extended.Wpf.Toolkit" version="2.5.0" />
+      <group targetFramework="sl5">
+        <dependency id="Compatibility" version="1.0.2" />
+      </group>
+      <group targetFramework="net40-client">
+        <dependency id="Compatibility" version="1.0.2" />
       </group>
     </dependencies>
 
@@ -29,14 +30,14 @@
 
   <files>
     <!-- Silverlight 5 -->
-    <file src="..\ZoomAndPan\ZoomAndPan.Silverlight\Bin\Release\ZoomAndPan.dll" target="lib\sl5\ZoomAndPan.dll" />
-    <file src="..\FloatingWindow\FloatingWindow.Silverlight\Bin\Release\SilverFlow.Controls.dll" target="lib\sl5\SilverFlow.Controls.dll" />
-    <file src="..\FloatingWindowZUI\FloatingWindowZUI.Silverlight\Bin\Release\FloatingWindowZUI.dll" target="lib\sl5\FloatingWindowZUI.dll" />
-    <file src="..\FloatingWindow\FloatingWindow.Silverlight\Bin\Release\FJ.Core.dll" target="lib\sl50\FJ.Core.dll" />
+    <file src="..\ZoomAndPan\ZoomAndPan.Silverlight\Bin\Debug\ZoomAndPan.dll" target="lib\sl5\ZoomAndPan.dll" />
+    <file src="..\FloatingWindow\FloatingWindow.Silverlight\Bin\Debug\SilverFlow.Controls.dll" target="lib\sl5\SilverFlow.Controls.dll" />
+    <file src="..\FloatingWindowZUI\FloatingWindowZUI.Silverlight\Bin\Debug\FloatingWindowZUI.dll" target="lib\sl5\FloatingWindowZUI.dll" />
+    <file src="..\FloatingWindow\FloatingWindow.Silverlight\Bin\Debug\FJ.Core.dll" target="lib\sl50\FJ.Core.dll" />
     <!-- WPF -->
-    <file src="..\ZoomAndPan\ZoomAndPan.WPF\Bin\Release\ZoomAndPan.dll" target="lib\net40-client\ZoomAndPan.dll" />
-    <file src="..\FloatingWindow\FloatingWindow.WPF\Bin\Release\SilverFlow.Controls.dll" target="lib\net40-client\SilverFlow.Controls.dll" />
-    <file src="..\FloatingWindowZUI\FloatingWindowZUI.WPF\Bin\Release\FloatingWindowZUI.dll" target="lib\net40-client\FloatingWindowZUI.dll" />
+    <file src="..\ZoomAndPan\ZoomAndPan.WPF\Bin\Debug\ZoomAndPan.dll" target="lib\net40-client\ZoomAndPan.dll" />
+    <file src="..\FloatingWindow\FloatingWindow.WPF\Bin\Debug\SilverFlow.Controls.dll" target="lib\net40-client\SilverFlow.Controls.dll" />
+    <file src="..\FloatingWindowZUI\FloatingWindowZUI.WPF\Bin\Debug\FloatingWindowZUI.dll" target="lib\net40-client\FloatingWindowZUI.dll" />
   </files>
 
 </package>
