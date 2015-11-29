@@ -1,4 +1,5 @@
-﻿//AnimationHelper.cs
+﻿//Project: ZUI (http://github.com/zoomicon/ZUI)
+//AnimationHelper.cs
 //Version: 20130406
 
 using System;
@@ -16,7 +17,7 @@ namespace ZoomAndPan
     /// </summary>
     public static class AnimationHelper
     {
-        
+
         /// <summary>
         /// Starts an animation to a particular value on the specified dependency property.
         /// </summary>
@@ -58,10 +59,10 @@ namespace ZoomAndPan
 
             animatableElement.BeginAnimation(dependencyProperty, animation);
 #else
-            animatableElement.SetValue(dependencyProperty, toValue);            
+            animatableElement.SetValue(dependencyProperty, toValue);
 #endif
         }
-     
+
         /// <summary>
         /// Cancel any animations that are running on the specified dependency property.
         /// </summary>

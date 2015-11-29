@@ -1,6 +1,6 @@
-﻿//Filename: ZoomAndPanControl_Mouse.cs
+﻿//Project: ZUI (http://github.com/zoomicon/ZUI)
+//Filename: ZoomAndPanControl_Mouse.cs
 //Version: 20150104
-//Editor: George Birbilis (http://zoomicon.com)
 
 using System;
 using System.Windows;
@@ -12,15 +12,15 @@ namespace ZoomAndPan
     /// <summary>
     /// This is an extension to the ZoomAndPanControl class that implements
     /// default mouse handling properties and functions.
-    /// 
-    /// </summary>   
+    ///
+    /// </summary>
     public partial class ZoomAndPanControl
     {
 
       #region Mouse-related Fields
 
       private bool isDefaultMouseHandling = false;
-      
+
       /// <summary>
       /// Parts needed for drag zoom rectangle, initialized at "OnApplyTemplate" method
       /// </summary>
@@ -68,8 +68,8 @@ namespace ZoomAndPan
 
       public bool IsDefaultMouseHandling {
         get { return isDefaultMouseHandling; }
-        set { 
-          isDefaultMouseHandling = value; 
+        set {
+          isDefaultMouseHandling = value;
           IsMouseWheelScrollingEnabled = value; //mousewheel scrolls up/down (with SHIFT we also force scroll left/right, with CTRL zoom in/out)
         }
       }
@@ -78,10 +78,10 @@ namespace ZoomAndPan
 
       #region Mouse-related Methods
 
-      protected 
+      protected
 #if !SILVERLIGHT
         override
-#else 
+#else
         virtual
 #endif
         void OnMouseDoubleClick(MouseButtonEventArgs e)
@@ -100,13 +100,13 @@ namespace ZoomAndPan
         }
 
       }
-      
+
       protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
       {
         //base.OnMouseLeftButtonDown(e);
         if (!isDefaultMouseHandling) return;
         //if (e.Handled) return;
-        
+
         OnMouseDown(e, MouseButton.Left);
       }
 
@@ -115,10 +115,10 @@ namespace ZoomAndPan
         //base.OnMouseRightButtonDown(e);
         if (!isDefaultMouseHandling) return;
         //if (e.Handled) return;
-        
+
         OnMouseDown(e, MouseButton.Right);
       }
-      
+
       protected virtual void OnMouseDown(MouseButtonEventArgs e, MouseButton changedButton)
       {
         Focus(); //had content.Focus
@@ -132,7 +132,7 @@ namespace ZoomAndPan
         origContentMouseDownPoint = e.GetPosition(content);
 
         // Control + left/right-down initiates zooming mode.
-        if (ContentScalable && ((Keyboard.Modifiers & ModifierKeys.Control) != 0) 
+        if (ContentScalable && ((Keyboard.Modifiers & ModifierKeys.Control) != 0)
             &&
             (mouseButtonDown == MouseButton.Left ||
              mouseButtonDown == MouseButton.Right))
@@ -197,7 +197,7 @@ namespace ZoomAndPan
             e.Handled = ContentScalable;
             break;
 
-          case MouseHandlingMode.DragZooming: //drag-zooming has finished 
+          case MouseHandlingMode.DragZooming: //drag-zooming has finished
             ApplyDragZoomRect(); //zoom in on the rectangle that was highlighted by the user.
             e.Handled = true;
             break;
@@ -218,7 +218,7 @@ namespace ZoomAndPan
 #if !SILVERLIGHT
         if (e.Handled) return;
 #endif
-        
+
         if (mouseHandlingMode == MouseHandlingMode.None) return;
 
         Point curContentMousePoint = e.GetPosition(content);
@@ -245,7 +245,7 @@ namespace ZoomAndPan
 #if !DRAGZOOMRECT
             if (ContentScalable && (mouseButtonDown == MouseButton.Left))
             {
-              if ((curZoomAndPanControlMousePoint.Y - origZoomAndPanControlMouseDownPoint.Y /*dragOffset.X*/) < -dragThreshold) ZoomAboutPoint(ContentScale + 0.02, origContentMouseDownPoint); //CTRL + drag up to zoom in 
+              if ((curZoomAndPanControlMousePoint.Y - origZoomAndPanControlMouseDownPoint.Y /*dragOffset.X*/) < -dragThreshold) ZoomAboutPoint(ContentScale + 0.02, origContentMouseDownPoint); //CTRL + drag up to zoom in
               else if ((curZoomAndPanControlMousePoint.Y - origZoomAndPanControlMouseDownPoint.Y /*dragOffset.Y*/) > dragThreshold) ZoomAboutPoint(ContentScale - 0.02, origContentMouseDownPoint); //CTRL + drag down to zoom out
             }
 #else //DRAGZOOMRECT
@@ -292,14 +292,14 @@ namespace ZoomAndPan
         if (!isDefaultMouseHandling) return;
         if (e.Handled) return;
 
-        if (ContentScalable && ((Keyboard.Modifiers & ModifierKeys.Control) != 0)) 
+        if (ContentScalable && ((Keyboard.Modifiers & ModifierKeys.Control) != 0))
         {
           Point mousePosition = e.GetPosition(content); //delta should be either >0 or <0
           if (e.Delta > 0)
              ZoomIn(mousePosition);
           else if (e.Delta < 0)
              ZoomOut(mousePosition);
-        } 
+        }
 
         else if ((Keyboard.Modifiers & ModifierKeys.Shift) != 0) {
           if (e.Delta > 0) MouseWheelLeft();
@@ -339,7 +339,7 @@ namespace ZoomAndPan
 
         //
         // Deterine x,y,width and height of the rect inverting the points if necessary.
-        // 
+        //
 
         if (pt2.X < pt1.X)
         {
@@ -390,7 +390,7 @@ namespace ZoomAndPan
         double contentY = Canvas.GetTop(dragZoomBorder);
         double contentWidth = dragZoomBorder.Width;
         double contentHeight = dragZoomBorder.Height;
-        
+
         AnimatedZoomTo(new Rect(contentX, contentY, contentWidth, contentHeight));
         FadeOutDragZoomRect();
       }

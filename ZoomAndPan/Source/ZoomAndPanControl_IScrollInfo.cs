@@ -1,4 +1,5 @@
-﻿//Filename: ZoomAndPanControl_IScrollInfo.cs
+﻿//Project: ZUI (http://github.com/zoomicon/ZUI)
+//Filename: ZoomAndPanControl_IScrollInfo.cs
 //Version: 20140808
 
 using System.Windows;
@@ -14,15 +15,15 @@ namespace ZoomAndPan
     /// <summary>
     /// This is an extension to the ZoomAndPanControl class that implements
     /// the IScrollInfo interface properties and functions.
-    /// 
+    ///
     /// IScrollInfo is implemented to allow ZoomAndPanControl to be wrapped (in XAML)
-    /// in a ScrollViewer.  IScrollInfo allows the ScrollViewer and ZoomAndPanControl to 
+    /// in a ScrollViewer.  IScrollInfo allows the ScrollViewer and ZoomAndPanControl to
     /// communicate important information such as the horizontal and vertical scrollbar offsets.
-    /// 
+    ///
     /// There is a good series of articles showing how to implement IScrollInfo starting here:
     ///     http://blogs.msdn.com/bencon/archive/2006/01/05/509991.aspx
-    ///     
-    /// </summary>   
+    ///
+    /// </summary>
     public partial class ZoomAndPanControl
     {
 

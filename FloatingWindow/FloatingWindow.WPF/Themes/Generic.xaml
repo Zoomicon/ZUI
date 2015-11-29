@@ -1,6 +1,7 @@
 ﻿<!--
-  Filename: Generic.xaml
-  Version: 20150716
+Project: ZUI (http://github.com/zoomicon/ZUI)
+Filename: Generic.xaml
+Version: 20150716
 -->
 
 <ResourceDictionary
@@ -734,7 +735,7 @@
                     Background="{TemplateBinding Background}"
                     >
                     <!-- the special Margin is needed to fix a small line gap between window border and titlebar that shows up when zooming the UI -->
-                    <!-- not setting the background at the outer border, sice we want to be able to have titlebar color with transparency -->
+                    <!-- not setting the background at the outer border, since we want to be able to have titlebar color with transparency -->
 
                     <ContentPresenter
                       x:Name="ContentPresenter"

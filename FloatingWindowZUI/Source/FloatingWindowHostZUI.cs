@@ -51,7 +51,7 @@ namespace FloatingWindowZUI
     #region ZoomHost
 
     protected ZoomAndPanControl _zoomHost;
-    
+
     public ZoomAndPanControl ZoomHost {
       get
       {
@@ -229,7 +229,7 @@ namespace FloatingWindowZUI
     }
 
     #endregion
- 
+
     #region FloatingWindowEvents
 
     private void SubscribeToFloatingWindowEvents()

@@ -1,4 +1,5 @@
-﻿//Filename: IconbarZUI.cs
+﻿//Project: ZUI (http://github.com/zoomicon/ZUI)
+//Filename: IconbarZUI.cs
 //Version: 20140904
 
 using SilverFlow.Controls;
