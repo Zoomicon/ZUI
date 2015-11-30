@@ -14,6 +14,7 @@ Version: 20141111
   xmlns:zui="clr-namespace:FloatingWindowZUI"
   xmlns:utils="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
   >
+  <!-- do not use ;assembly=FloatingWindowZUI suffix above in WPF version, won't compile -->
 
   <!-- <helpers:BitmapHelper x:Key="BitmapHelper" Width="100" Height="100" xmlns:helpers="clr-namespace:SilverFlow.Controls.Helpers;assembly=SilverFlow.Controls" /> -->
 

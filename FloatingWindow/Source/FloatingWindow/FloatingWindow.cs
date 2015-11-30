@@ -1,5 +1,5 @@
 //Filename: FloatingWindow.cs
-//Version: 20150721
+//Version: 20151130
 
 //#define BORDER_ONLY_AT_RESIZABLE //using BorderThickness instead to allow user to define when they want the border to be visible themselves
 
@@ -241,7 +241,7 @@ namespace SilverFlow.Controls
     {
       get { return this.FloatingWindowHost == null ? null : this.FloatingWindowHost.HostPanel; }
     }
-    
+
     /// <summary>
     /// Gets a Snapin controller.
     /// </summary>
@@ -333,8 +333,8 @@ namespace SilverFlow.Controls
     /// Gets or sets the minimum height constraint of a <see cref="T:System.Windows.FrameworkElement"/>.
     /// </summary>
     /// <value>he minimum height of the window.</value>
-    /// <returns>The minimum height of the window, in pixels. The default is 0. 
-    /// This value can be any value equal to or greater than 0. 
+    /// <returns>The minimum height of the window, in pixels. The default is 0.
+    /// This value can be any value equal to or greater than 0.
     /// However, <see cref="F:System.Double.PositiveInfinity"/> is not valid.</returns>
     public new double MinHeight
     {
@@ -370,7 +370,7 @@ namespace SilverFlow.Controls
     {
       get { return new Rect(Position.X, Position.Y, ActualWidth, ActualHeight); }
     }
-    
+
     /// <summary>
     /// Gets the bounds of the maximized window.
     /// </summary>
@@ -673,7 +673,7 @@ namespace SilverFlow.Controls
     #region Title
 
     /// <summary>
-    /// Gets or sets title content that is displayed on the top of the window. 
+    /// Gets or sets title content that is displayed on the top of the window.
     /// Can contain any UI elements - not only a text.
     /// </summary>
     /// <value>
@@ -703,7 +703,7 @@ namespace SilverFlow.Controls
     #region Icon
 
     /// <summary>
-    /// Gets or sets content that is displayed as an icon of the window on the iconbar. 
+    /// Gets or sets content that is displayed as an icon of the window on the iconbar.
     /// </summary>
     /// <value>
     /// The content displayed as an icon of the window on the iconbar. The default is null.
@@ -1967,7 +1967,7 @@ namespace SilverFlow.Controls
     #region Event Handlers
 
     /// <summary>
-    /// Handles the SizeChanged event of the ContentRoot control to update window position 
+    /// Handles the SizeChanged event of the ContentRoot control to update window position
     /// only once when the window is opened.
     /// </summary>
     /// <param name="sender">The source of the event.</param>
@@ -2235,7 +2235,7 @@ namespace SilverFlow.Controls
       // Gets the element with keyboard focus (must do before calling "SetTopmost")
       Control elementWithFocus =
         #if SILVERLIGHT
-        FocusManager.GetFocusedElement() as Control;
+        System.Windows.Input.FocusManager.GetFocusedElement() as Control;
         #else
         Keyboard.FocusedElement as Control;
         #endif
@@ -2460,7 +2460,7 @@ namespace SilverFlow.Controls
     #region Templating
 
     /// <summary>
-    /// Builds the visual tree for the <see cref="FloatingWindow" /> control 
+    /// Builds the visual tree for the <see cref="FloatingWindow" /> control
     /// when a new template is applied.
     /// </summary>
     public override void OnApplyTemplate()
@@ -2621,7 +2621,7 @@ namespace SilverFlow.Controls
         {
           var states = (from stategroup in groups
                         where stategroup.Name == FloatingWindow.VSMGROUP_Window
-                        select stategroup.States).FirstOrDefault() as 
+                        select stategroup.States).FirstOrDefault() as
                         #if SILVERLIGHT
                         Collection
                         #else
@@ -2657,7 +2657,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Subscribes to the events on the storyboards. 
+    /// Subscribes to the events on the storyboards.
     /// </summary>
     private void SubscribeToStoryBoardEvents()
     {
@@ -2681,7 +2681,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Unsubscribe from events that are subscribed on the storyboards. 
+    /// Unsubscribe from events that are subscribed on the storyboards.
     /// </summary>
     private void UnsubscribeFromStoryBoardEvents()
     {
@@ -2726,7 +2726,7 @@ namespace SilverFlow.Controls
       #if SILVERLIGHT
       SaveActualSize(); //do we need this here?
 
-      this.MoveAndResize(previousPosition, previousSize.Width, previousSize.Height, RestoringDurationInMilliseconds, RestoringMaximized_Completed); 
+      this.MoveAndResize(previousPosition, previousSize.Width, previousSize.Height, RestoringDurationInMilliseconds, RestoringMaximized_Completed);
       #else
       this.MoveAndResize(restoreMaximizedStoryboard, previousPosition, previousSize.Width, previousSize.Height, RestoringDurationInMilliseconds); //the story board has its own completion event handler attached
       #endif
@@ -2804,7 +2804,7 @@ namespace SilverFlow.Controls
     /// </summary>
     private void StopInertialMotion()
     {
-      if (inertialMotionStoryboard.Children.Count > 0 && 
+      if (inertialMotionStoryboard.Children.Count > 0 &&
           inertialMotionStoryboard.GetCurrentState() != ClockState.Stopped)
       {
         inertialMotionStoryboard.Pause();
@@ -2896,7 +2896,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Saves the actual size if it was not set explicitly set. 
+    /// Saves the actual size if it was not set explicitly set.
     /// E.g. the Width can be NaN, that means "Auto".
     /// </summary>
     private void SaveActualSize()
@@ -2985,7 +2985,7 @@ namespace SilverFlow.Controls
       }
 
       // Check that ScaleTransform exists in the TransformGroup
-      // ScaleTransform is used as a target in Storyboards 
+      // ScaleTransform is used as a target in Storyboards
       var scaleTransform = transformGroup.Children.OfType<ScaleTransform>().FirstOrDefault();
 
       if (scaleTransform == null)
