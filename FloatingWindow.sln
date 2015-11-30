@@ -7,19 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{93136668-290F-4399-AAF1-74BF102E1D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight", "FloatingWindow.Silverlight\FloatingWindow.Silverlight.csproj", "{3F3D3C8C-9724-4531-A04D-B92049F64686}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight", "FloatingWindow\FloatingWindow.Silverlight\FloatingWindow.Silverlight.csproj", "{3F3D3C8C-9724-4531-A04D-B92049F64686}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo", "FloatingWindow.Silverlight.Demo\FloatingWindow.Silverlight.Demo\FloatingWindow.Silverlight.Demo.csproj", "{48FCE6B6-BFFA-48A4-B871-27A5F8640AB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo", "FloatingWindow\FloatingWindow.Silverlight.Demo\FloatingWindow.Silverlight.Demo\FloatingWindow.Silverlight.Demo.csproj", "{48FCE6B6-BFFA-48A4-B871-27A5F8640AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo.Web", "FloatingWindow.Silverlight.Demo\FloatingWindow.Silverlight.Demo.Web\FloatingWindow.Silverlight.Demo.Web.csproj", "{70608BF1-0310-45D0-96A6-744A2F00DB83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo.Web", "FloatingWindow\FloatingWindow.Silverlight.Demo\FloatingWindow.Silverlight.Demo.Web\FloatingWindow.Silverlight.Demo.Web.csproj", "{70608BF1-0310-45D0-96A6-744A2F00DB83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.WPF", "FloatingWindow.WPF\FloatingWindow.WPF.csproj", "{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.WPF", "FloatingWindow\FloatingWindow.WPF\FloatingWindow.WPF.csproj", "{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.WPF.Demo", "FloatingWindow.WPF.Demo\FloatingWindow.WPF.Demo.csproj", "{A7CB8324-81B9-48C4-9357-3AAD3A4E8982}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.WPF.Demo", "FloatingWindow\FloatingWindow.WPF.Demo\FloatingWindow.WPF.Demo.csproj", "{A7CB8324-81B9-48C4-9357-3AAD3A4E8982}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo.Simple", "FloatingWindow.Silverlight.Demo.Simple\FloatingWindow.Silverlight.Demo.Simple\FloatingWindow.Silverlight.Demo.Simple.csproj", "{E0C38766-30EE-4ED8-82B8-CBDD2185FE39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo.Simple", "FloatingWindow\FloatingWindow.Silverlight.Demo.Simple\FloatingWindow.Silverlight.Demo.Simple\FloatingWindow.Silverlight.Demo.Simple.csproj", "{E0C38766-30EE-4ED8-82B8-CBDD2185FE39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo.Simple.Web", "FloatingWindow.Silverlight.Demo.Simple\FloatingWindow.Silverlight.Demo.Simple.Web\FloatingWindow.Silverlight.Demo.Simple.Web.csproj", "{CAEA4540-2DAB-4681-B261-A11C3A3E4FD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindow.Silverlight.Demo.Simple.Web", "FloatingWindow\FloatingWindow.Silverlight.Demo.Simple\FloatingWindow.Silverlight.Demo.Simple.Web\FloatingWindow.Silverlight.Demo.Simple.Web.csproj", "{CAEA4540-2DAB-4681-B261-A11C3A3E4FD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F71881D-9865-4F62-8BE4-F079749EA1B5}"
 	ProjectSection(SolutionItems) = preProject

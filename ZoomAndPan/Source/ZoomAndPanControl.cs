@@ -1,10 +1,10 @@
-﻿//Filename: ZoomAndPanControl.cs
+﻿//Project: ZUI (http://github.com/zoomicon/ZUI)
+//Filename: ZoomAndPanControl.cs
 //Version: 20140306
-//Editor: George Birbilis <zoomicon.com>
 
 //Based on:
 //- WPF: http://www.codeproject.com/Articles/85603/A-WPF-custom-control-for-zooming-and-panning
-//- Silerlight: http://www.codeproject.com/Articles/167453/A-Silverlight-custom-control-for-zooming-and-panni
+//- Silverlight: http://www.codeproject.com/Articles/167453/A-Silverlight-custom-control-for-zooming-and-panni
 
 using System;
 using System.Windows;
@@ -48,13 +48,13 @@ namespace ZoomAndPan
     private bool enableContentOffsetUpdateFromScale = false;
 
     /// <summary>
-    /// Used to disable syncronization between IScrollInfo interface and ContentOffsetX/ContentOffsetY.
+    /// Used to disable synchronization between IScrollInfo interface and ContentOffsetX/ContentOffsetY.
     /// </summary>
     private bool disableScrollOffsetSync = false;
 
     /// <summary>
     /// Normally when content offsets changes the content focus is automatically updated.
-    /// This syncronization is disabled when 'disableContentFocusSync' is set to 'true'.
+    /// This synchronization is disabled when 'disableContentFocusSync' is set to 'true'.
     /// When we are zooming in or out we 'disableContentFocusSync' is set to 'true' because
     /// we are zooming in or out relative to the content focus we don't want to update the focus.
     /// </summary>

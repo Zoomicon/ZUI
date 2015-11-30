@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24627.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Silverlight", "ZoomAndPan.Silverlight\ZoomAndPan.Silverlight.csproj", "{8E75887A-A164-41B8-86D5-8DC37768B5A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Silverlight", "ZoomAndPan\ZoomAndPan.Silverlight\ZoomAndPan.Silverlight.csproj", "{8E75887A-A164-41B8-86D5-8DC37768B5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.WPF", "ZoomAndPan.WPF\ZoomAndPan.WPF.csproj", "{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.WPF", "ZoomAndPan\ZoomAndPan.WPF\ZoomAndPan.WPF.csproj", "{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.Advanced.WPF", "ZoomAndPan.Demo.Advanced\ZoomAndPan.Demo.Advanced.WPF\ZoomAndPan.Demo.Advanced.WPF.csproj", "{120DA64E-D1B0-4D35-96CA-E3986504A1B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.Advanced.WPF", "ZoomAndPan\ZoomAndPan.Demo.Advanced\ZoomAndPan.Demo.Advanced.WPF\ZoomAndPan.Demo.Advanced.WPF.csproj", "{120DA64E-D1B0-4D35-96CA-E3986504A1B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.DataBinding.WPF", "ZoomAndPan.Demo.DataBinding\ZoomAndPan.Demo.DataBinding.WPF\ZoomAndPan.Demo.DataBinding.WPF.csproj", "{348405FA-5AAC-4F8B-BB47-211CAD2294AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.DataBinding.WPF", "ZoomAndPan\ZoomAndPan.Demo.DataBinding\ZoomAndPan.Demo.DataBinding.WPF\ZoomAndPan.Demo.DataBinding.WPF.csproj", "{348405FA-5AAC-4F8B-BB47-211CAD2294AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.ImageCache.WPF", "ZoomAndPan.Demo.ImageCache\ZoomAndPan.Demo.ImageCache.WPF\ZoomAndPan.Demo.ImageCache.WPF.csproj", "{531A583E-E43B-46AF-B6A1-6F6768C045F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.ImageCache.WPF", "ZoomAndPan\ZoomAndPan.Demo.ImageCache\ZoomAndPan.Demo.ImageCache.WPF\ZoomAndPan.Demo.ImageCache.WPF.csproj", "{531A583E-E43B-46AF-B6A1-6F6768C045F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.InfiniteWorkspace.WPF", "ZoomAndPan.Demo.InfiniteWorkspace\ZoomAndPan.Demo.InfiniteWorkspace.WPF\ZoomAndPan.Demo.InfiniteWorkspace.WPF.csproj", "{CD1CC86C-7BAF-45F1-889F-FB087DE883EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.InfiniteWorkspace.WPF", "ZoomAndPan\ZoomAndPan.Demo.InfiniteWorkspace\ZoomAndPan.Demo.InfiniteWorkspace.WPF\ZoomAndPan.Demo.InfiniteWorkspace.WPF.csproj", "{CD1CC86C-7BAF-45F1-889F-FB087DE883EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.Simple.WPF", "ZoomAndPan.Demo.Simple\ZoomAndPan.Demo.Simple.WPF\ZoomAndPan.Demo.Simple.WPF.csproj", "{A84A4C53-7584-4F14-B1A9-109CF127C59C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.Simple.WPF", "ZoomAndPan\ZoomAndPan.Demo.Simple\ZoomAndPan.Demo.Simple.WPF\ZoomAndPan.Demo.Simple.WPF.csproj", "{A84A4C53-7584-4F14-B1A9-109CF127C59C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.TestZoom.Silverlight", "ZoomAndPan.Demo.TestZoom\ZoomAndPan.Demo.TestZoom.Silverlight\ZoomAndPan.Demo.TestZoom.Silverlight.csproj", "{94616396-F9C8-4EB8-82A4-9B1C3994CFBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.TestZoom.Silverlight", "ZoomAndPan\ZoomAndPan.Demo.TestZoom\ZoomAndPan.Demo.TestZoom.Silverlight\ZoomAndPan.Demo.TestZoom.Silverlight.csproj", "{94616396-F9C8-4EB8-82A4-9B1C3994CFBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.TestZoom.Silverlight.Web", "ZoomAndPan.Demo.TestZoom\ZoomAndPan.Demo.TestZoom.Silverlight.Web\ZoomAndPan.Demo.TestZoom.Silverlight.Web.csproj", "{70608BF1-0310-45D0-96A6-744A2F00DB83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.TestZoom.Silverlight.Web", "ZoomAndPan\ZoomAndPan.Demo.TestZoom\ZoomAndPan.Demo.TestZoom.Silverlight.Web\ZoomAndPan.Demo.TestZoom.Silverlight.Web.csproj", "{70608BF1-0310-45D0-96A6-744A2F00DB83}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{27B0C3BF-B244-478B-90A3-B39BC997F285}"
 EndProject

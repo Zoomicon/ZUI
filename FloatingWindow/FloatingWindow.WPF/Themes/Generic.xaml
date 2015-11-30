@@ -1,6 +1,7 @@
 ﻿<!--
-  Filename: Generic.xaml
-  Version: 20150716
+Project: ZUI (http://github.com/zoomicon/ZUI)
+Filename: Generic.xaml
+Version: 20151130
 -->
 
 <ResourceDictionary
@@ -8,7 +9,7 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:controls="clr-namespace:SilverFlow.Controls"
   >
-  <!-- do not use ;assembly=SilverFlow.Controls suffix above, won't compile in WPF -->
+  <!-- do not use ;assembly=SilverFlow.Controls suffix above in WPF version, won't compile -->
 
   <!-- Window Button Brushes -->
   <SolidColorBrush x:Key="WindowButtonForeground">#FF9E9E9E</SolidColorBrush>
@@ -476,10 +477,10 @@
     <Setter Property="Margin" Value="0,0,1,0" />
     <Setter Property="Padding" Value="2" />
     <Setter Property="VerticalAlignment" Value="Bottom" />
-    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="CornerRadius" Value="2" />
     <Setter Property="BorderThickness" Value="0.7" />
     <Setter Property="BorderBrush" Value="Transparent" />
-    <Setter Property="UseLayoutRounding" Value="True" />
+    <!-- <Setter Property="UseLayoutRounding" Value="True" /> -->
     <Setter Property="Background">
       <Setter.Value>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -494,9 +495,11 @@
     <Setter Property="Width" Value="300"/>
     <Setter Property="Height" Value="200"/>
     <Setter Property="IsTabStop" Value="False"/>
+    <!-- TODO: create custom dependency properties for these so that they can be set in XAML the same way at WPF and Silverlight -->
     <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
     <Setter Property="FocusManager.IsFocusScope" Value="True"/>
     <Setter Property="KeyboardNavigation.TabNavigation" Value="Cycle"/>
+    <!-- <Setter Property="TabNavigation" Value="Cycle"/> -->
     <Setter Property="HorizontalAlignment" Value="Center"/>
     <Setter Property="VerticalAlignment" Value="Center"/>
     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -609,9 +612,12 @@
               Width="{TemplateBinding Width}"
               >
 
+              <!-- Removed: this causes all Grid content to not be h/w accelerated in Silverlight. See workaround at:
+                            http://www.pitorque.de/MisterGoodcat/post/Silverlight-Fixing-the-BookShelf-Sample.aspx
               <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0.5" Opacity="0.35" BlurRadius="12" />
               </Grid.Effect>
+              -->
 
               <Grid.RenderTransform>
                 <TransformGroup>
@@ -734,7 +740,7 @@
                     Background="{TemplateBinding Background}"
                     >
                     <!-- the special Margin is needed to fix a small line gap between window border and titlebar that shows up when zooming the UI -->
-                    <!-- not setting the background at the outer border, sice we want to be able to have titlebar color with transparency -->
+                    <!-- not setting the background at the outer border, since we want to be able to have titlebar color with transparency -->
 
                     <ContentPresenter
                       x:Name="ContentPresenter"
@@ -768,6 +774,11 @@
       <Setter.Value>
         <ControlTemplate TargetType="controls:BootstrapButton">
           <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" RenderTransformOrigin="0.5,0.5">
+            <!--
+            <Grid.RenderTransform>
+              <CompositeTransform/>
+            </Grid.RenderTransform>
+            -->
             <VisualStateManager.VisualStateGroups>
               <VisualStateGroup x:Name="CommonStates">
                 <VisualStateGroup.Transitions>
@@ -808,7 +819,7 @@
                         <CubicEase EasingMode="EaseOut"/>
                       </DoubleAnimation.EasingFunction>
                     </DoubleAnimation>
-                    <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="RenderTransform.Children[3].Y" Storyboard.TargetName="PART_Arrow"/>
+                     <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="RenderTransform.Children[3].Y" Storyboard.TargetName="PART_Arrow"/>
                   </Storyboard>
                 </VisualState>
               </VisualStateGroup>
@@ -950,7 +961,7 @@
     <Setter Property="IsTabStop" Value="false"/>
     <Setter Property="HorizontalAlignment" Value="Stretch"/>
     <Setter Property="VerticalAlignment" Value="Bottom"/>
-    <Setter Property="UseLayoutRounding" Value="True"/>
+    <!-- <Setter Property="UseLayoutRounding" Value="True"/> -->
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="controls:Iconbar">
@@ -1024,7 +1035,7 @@
 
   <Style TargetType="controls:WindowIcon">
     <Setter Property="IsTabStop" Value="false"/>
-    <Setter Property="UseLayoutRounding" Value="True"/>
+    <!-- <Setter Property="UseLayoutRounding" Value="True"/> -->
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="controls:WindowIcon">
@@ -1065,7 +1076,7 @@
               </Grid.RowDefinitions>
               <Border Grid.Row="0" Padding="2">
                 <Grid>
-                  <Image x:Name="PART_Thumbnail" Stretch="None" UseLayoutRounding="True" />
+                  <Image x:Name="PART_Thumbnail" Stretch="None" /> <!-- UseLayoutRounding="True" -->
                   <Border x:Name="PART_IconContainer" HorizontalAlignment="Center" VerticalAlignment="Center" />
                   <Border x:Name="PART_Overlay" Background="#01000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" />
                 </Grid>
@@ -1078,8 +1089,8 @@
                   Margin="5,2"
                   TextTrimming="WordEllipsis"
                   FontSize="10.667"
-                  UseLayoutRounding="True"
                   />
+                  <!-- UseLayoutRounding="True" -->
               </Border>
             </Grid>
           </Border>

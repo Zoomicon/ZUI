@@ -1,65 +1,70 @@
 ﻿<!--
-  Filename: Generic.xaml
-  Version: 20131216
+Project: ZUI (http://github.com/zoomicon/ZUI)
+Filename: Generic.xaml
+Version: 20151130
 -->
-  
-  <ResourceDictionary 
+
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:zoom="clr-namespace:ZoomAndPan;assembly=ZoomAndPan">
+    xmlns:zoom="clr-namespace:ZoomAndPan;assembly=ZoomAndPan"
+    >
 
-  <!--
-    Default style and template for the ZoomAndPanControl.
-    -->
-  <!--//WPF//     
-    <Style TargetType="{x:Type zoom:ZoomAndPanControl}">
-    -->
+  <!-- do not use ;assembly=ZoomAndPan suffix above in WPF version, won't compile -->
+
+  <!-- Default style and template for the ZoomAndPanControl -->
+
   <Style TargetType="zoom:ZoomAndPanControl">
 
     <Setter Property="Template">
       <Setter.Value>
 
-        <!--//WPF//     
-                <ControlTemplate TargetType="{x:Type zoom:ZoomAndPanControl}">
-                -->
         <ControlTemplate TargetType="zoom:ZoomAndPanControl">
-          <!-- must set a background brush, even a Transaparent one in order to receive mouse events at the top-level container -->
-          <Border Background="Transparent" 
-                  BorderBrush="{TemplateBinding BorderBrush}"
-                  BorderThickness="{TemplateBinding BorderThickness}">
+          <!-- must set a background brush, even a Transparent one in order to receive mouse events at the top-level container -->
+          <Border
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            >
 
             <!-- setting any background defined for the ZoomAndPanControl to the Grid that is inside the toplevel Border -->
             <Grid Background="{TemplateBinding Background}">
-              <!-- 
-                        The ContentPresenter is used to scale and offset the content of ZoomAndPanControl.
-                    
-                        A transforms computed from 'ContentScale', 'ContentOffsetX' and 'ContentOffsetY' are assigned 
-                        to the 'RenderTransform' property in OnApplyTemplate in ZoomAndPanControl.cs.
-                        
-                        The alignment is set to top-left.  This allows the content offset to be used to place
-                        the content in the center of the viewport when the viewport is bigger than the content.
-                        -->
+
+              <!--
+              The ContentPresenter is used to scale and offset the content of ZoomAndPanControl.
+
+              A transform computed from 'ContentScale', 'ContentOffsetX' and 'ContentOffsetY' are assigned
+              to the 'RenderTransform' property in OnApplyTemplate in ZoomAndPanControl.cs.
+
+              The alignment is set to top-left.  This allows the content offset to be used to place
+              the content in the center of the viewport when the viewport is bigger than the content.
+              -->
               <ContentPresenter x:Name="PART_Content"
-                                          HorizontalAlignment="Left"
-                                          VerticalAlignment="Top" />
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                />
 
               <!--
           This Canvas and Border are used as a very simple way to render a drag rectangle that the user
           uses to specify an area to zoom in on.
           -->
-              <Canvas x:Name="PART_DragZoomCanvas" Visibility="Collapsed" 
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Top"
-                      Width="{Binding ElementName=PART_Content,Path=Width}"
-                      Height="{Binding ElementName=PART_Content,Path=Height}"
+              <Canvas
+                x:Name="PART_DragZoomCanvas" Visibility="Collapsed"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="{Binding ElementName=PART_Content,Path=Width}"
+                Height="{Binding ElementName=PART_Content,Path=Height}"
                       >
-                <Border x:Name="PART_DragZoomBorder" 
-                        BorderBrush="Black" BorderThickness="1"
-                        Background="Silver"
-                        CornerRadius="1"
-                        Opacity="0"
-                />
+                <Border
+                  x:Name="PART_DragZoomBorder"
+                  BorderBrush="Black"
+                  BorderThickness="1"
+                  Background="Silver"
+                  CornerRadius="1"
+                  Opacity="0"
+                  />
               </Canvas>
+
             </Grid>
 
           </Border>
