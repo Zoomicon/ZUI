@@ -1,5 +1,5 @@
 ﻿//Filename MainPage.xaml.cs
-//Version: 20150703
+//Version: 20151130
 
 using System.Diagnostics;
 using System.Windows;
@@ -28,36 +28,19 @@ namespace FloatingWindowZUI.Demo
 
       if (Application.Current.Host.Settings.EnableGPUAcceleration) //GPU acceleration can been turned on at HTML/ASPX page or at OOB settings for OOB apps
         window.CacheMode = new BitmapCache(); //must do this before setting the "Scale" property, since it will set "RenderAtScale" property of the BitmapCache
-      
+
       window.Scale = 1d / host.ZoomHost.ContentScale; //TODO: !!! don't use host.ContentScale, has bug and is always 1
-          
-      host.Add(window);
 
       string title = "Window " + nWindows++;
       window.Title = title;
       window.IconText = title;
 
-      window.Activated += (s, a) =>
-      {
-        Debug.WriteLine("Activated: {0}", window.IconText);
-      };
+      window.Activated += (s, a) => Debug.WriteLine("Activated: {0}", window.IconText);
+      window.Deactivated += (s, a) => Debug.WriteLine("Deactivated: {0}", window.IconText);
+      window.HelpRequested += (s, a) => { Debug.WriteLine("Help button pressed"); MessageBox.Show("Help..."); };
+      window.OptionsRequested += (s, a) => { Debug.WriteLine("Options button pressed"); MessageBox.Show("Options..."); };
 
-      window.Deactivated += (s, a) =>
-      {
-        Debug.WriteLine("Deactivated: {0}", window.IconText);
-      };
-
-      window.HelpRequested += (s, a) =>
-      {
-        Debug.WriteLine("Help button pressed");
-        MessageBox.Show("Help...");
-      };
-
-      window.OptionsRequested += (s, a) =>
-      {
-        Debug.WriteLine("Options button pressed");
-        MessageBox.Show("Options...");
-      };
+      host.Add(window);
 
       //Point startPoint = new Point(host.ZoomHost.ContentOffsetX + host.ZoomHost.ContentViewportWidth / 2, host.ZoomHost.ContentOffsetY + host.ZoomHost.ContentViewportHeight / 2); //Center at current view
       //window.Show(startPoint, true);

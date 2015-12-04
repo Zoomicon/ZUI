@@ -1,5 +1,5 @@
 ﻿//Filename: FloatingWindowHost.cs
-//Version: 20140904
+//Version: 20151130
 
 using System;
 using System.Collections.Generic;
@@ -793,7 +793,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Builds the visual tree for the <see cref="FloatingWindowHost" /> control 
+    /// Builds the visual tree for the <see cref="FloatingWindowHost" /> control
     /// when a new template is applied.
     /// </summary>
     public override void OnApplyTemplate()
@@ -933,7 +933,7 @@ namespace SilverFlow.Controls
         return windows;
       }
     }
-    
+
     /// <summary>
     /// Toggles the Iconbar.
     /// </summary>
@@ -941,7 +941,7 @@ namespace SilverFlow.Controls
     {
       IsIconbarVisible = !IsIconbarVisible;
     }
-    
+
     /// <summary>
     /// Updates the Iconbar if it is open.
     /// </summary>
@@ -971,7 +971,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Handles the MouseLeftButtonDown event of the Toolbar control. 
+    /// Handles the MouseLeftButtonDown event of the Toolbar control.
     /// Toggles the Iconbar on mouse left click.
     /// </summary>
     /// <param name="sender">The source of the event.</param>
@@ -1130,13 +1130,10 @@ namespace SilverFlow.Controls
     internal void ShowWindow(Action<Point, bool> action, Point point, bool bringToFront = true)
     {
       if (IsLayoutUpdated)
-      {
         action(point, bringToFront);
-      }
       else
-      {
-        this.Rendered += (s, e) => { action(point, bringToFront); };
-      }
+        Rendered += (s, e) =>
+          action(point, bringToFront);
     }
 
     /// <summary>
@@ -1147,14 +1144,10 @@ namespace SilverFlow.Controls
     internal void ShowWindow(Action<Thickness> action, Thickness margins)
     {
       if (IsLayoutUpdated)
-      {
         action(margins);
-      }
       else
-      {
-        this.Rendered += (s, e) => { action(margins); };
-
-      }
+        Rendered += (s, e) =>
+          action(margins);
     }
 
     /// <summary>
@@ -1206,7 +1199,7 @@ namespace SilverFlow.Controls
       if (Application.Current != null)
         Application.Current.Exit += Application_Exit;
 
-      this.LayoutUpdated += FloatingWindowHost_LayoutUpdated;
+      LayoutUpdated += FloatingWindowHost_LayoutUpdated;
     }
 
     /// <summary>
@@ -1215,8 +1208,8 @@ namespace SilverFlow.Controls
     private void UnsubscribeFromEvents()
     {
       if (Application.Current != null)
-        Application.Current.Exit -= Application_Exit; 
-      
+        Application.Current.Exit -= Application_Exit;
+
       this.LayoutUpdated -= FloatingWindowHost_LayoutUpdated;
     }
 
@@ -1236,8 +1229,8 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Raises the <see cref="E:Rendered"/> event. 
-    /// Occures when the control template is applied and the control can be rendered.
+    /// Raises the <see cref="E:Rendered"/> event.
+    /// Occurs when the control template is applied and the control can be rendered.
     /// </summary>
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected virtual void OnRendered(EventArgs e)
@@ -1281,7 +1274,7 @@ namespace SilverFlow.Controls
                      }
                      ).ToList().OrderBy(x => x.ZIndex).LastOrDefault();
 
-      return topmost != null ? topmost.Window : null;
+      return (topmost != null) ? topmost.Window : null;
     }
 
     /// <summary>
@@ -1320,7 +1313,7 @@ namespace SilverFlow.Controls
                     #if SILVERLIGHT
                     (DependencyObject)FocusManager.GetFocusedElement()
                     #else
-                   (DependencyObject)Keyboard.FocusedElement
+                    (DependencyObject)Keyboard.FocusedElement
                     #endif
            )) //checking if child control has the focus and not steal it from it
           window.Focus();
@@ -1386,14 +1379,14 @@ namespace SilverFlow.Controls
     /// </summary>
     private void SetStyles()
     {
-      if (toolbar != null && this.ToolbarStyle != null)
-        toolbar.Style = this.ToolbarStyle;
+      if (toolbar != null && ToolbarStyle != null)
+        toolbar.Style = ToolbarStyle;
 
-      if (bootstrapButton != null && this.BootstrapButtonStyle != null)
-        bootstrapButton.Style = this.BootstrapButtonStyle;
+      if (bootstrapButton != null && BootstrapButtonStyle != null)
+        bootstrapButton.Style = BootstrapButtonStyle;
 
-      if (iconbar != null && this.WindowIconStyle != null)
-        iconbar.WindowIconStyle = this.WindowIconStyle;
+      if (iconbar != null && WindowIconStyle != null)
+        iconbar.WindowIconStyle = WindowIconStyle;
     }
 
     /// <summary>
@@ -1405,7 +1398,7 @@ namespace SilverFlow.Controls
     /// <exception cref="NotImplementedException">The template part not found.</exception>
     private T GetTemplatePart<T>(string partName) where T : class
     {
-      T part = this.GetTemplateChild(partName) as T;
+      T part = GetTemplateChild(partName) as T;
 
       if (part == null)
         throw new NotImplementedException(string.Format(CultureInfo.InvariantCulture, "Template Part {0} is required.", partName));

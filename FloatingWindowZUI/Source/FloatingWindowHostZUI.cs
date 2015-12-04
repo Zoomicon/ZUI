@@ -307,7 +307,7 @@ namespace FloatingWindowZUI
       if (window.ScaleEnabled && (Keyboard.Modifiers & ModifierKeys.Control) != 0)
       {
         //delta should be either >0 or <0
-        //Point mousePosition = args.GetPosition(HostPanel); //could use mousePosition here to center the window to the mouse point or something, but preferred to have the logic at FloatingWindow.Scale itself, to recenter arround its previous center point after scaling
+        //Point mousePosition = args.GetPosition(HostPanel); //could use mousePosition here to center the window to the mouse point or something, but preferred to have the logic at FloatingWindow.Scale itself, to recenter around its previous center point after scaling
         if (e.Delta > 0)
           window.Scale += 0.05; //zoom in
         else if (e.Delta < 0)

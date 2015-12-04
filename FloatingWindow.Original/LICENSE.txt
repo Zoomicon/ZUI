@@ -1,7 +1,3 @@
-+ Based on http://jevgenijpankov.heliocode.com/articles/FloatingWindow.aspx
-
------
-
 The Code Project Open License (CPOL) 1.02
 
 The Code Project Open License (CPOL) is intended to provide developers who choose to share their code with a license that protects them and provides users of their code with a clear statement regarding how the code can be used.

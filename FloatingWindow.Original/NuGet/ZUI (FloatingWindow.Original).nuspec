@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+
+  <metadata>
+    <id>ZUI</id>
+    <version>0.2.1</version>
+    <title>ZUI</title>
+    <authors>birbilis, pankov</authors>
+    <owners>birbilis</owners>
+    <licenseUrl>https://github.com/Zoomicon/ZUI/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/Zoomicon/ZUI</projectUrl>
+    <iconUrl>http://zoomicon.com/logo.jpg</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <description>Container hosting Floating Windows</description>
+    <releaseNotes>This is the original FloatingWindow for WPF 1.0 and FloatingWindowControl for Silverlight 2.0.2 from http://jevgenijpankov.heliocode.com/articles/FloatingWindow.aspx</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Windows Floating Container</tags>
+  </metadata>
+
+  <files>
+    <!-- Silverlight 5 -->
+    <file src="..\FloatingWindow.Silverlight\SilverFlow.Controls\Bin\Release\SilverFlow.Controls.dll" target="lib\sl5\SilverFlow.Controls.dll" />
+    <!-- WPF -->
+    <file src="..\FloatingWindow.WPF\SilverFlow.Controls\Bin\Release\SilverFlow.Controls.dll" target="lib\net40\SilverFlow.Controls.dll" />
+  </files>
+
+</package>
