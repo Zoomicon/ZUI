@@ -198,7 +198,7 @@ namespace SilverFlow.Controls
 
     #endregion
 
-    #region --- Desctructor ---
+    #region --- Destructor ---
 
     /// <summary>
     /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
@@ -1098,7 +1098,7 @@ namespace SilverFlow.Controls
       FloatingWindow window = (FloatingWindow)d;
       if (window != null)
       {
-        window.RenderTransformOrigin = new Point(0.5, 0.5); //scale arround the window center
+        window.RenderTransformOrigin = new Point(0.5, 0.5); //scale around the window center
         window.RenderTransform = new ScaleTransform().SetScale((double)e.NewValue); //TODO: this may cause the window top-left to get out of container bounds, maybe should coerce scale then, or autoexpand the container (when that is implemented)
 
         /* //NOTE: causes issue with video acceleration
@@ -1618,7 +1618,7 @@ namespace SilverFlow.Controls
     /// </summary>
     /// <param name="x">X-coordinate.</param>
     /// <param name="y">Y-coordinate.</param>
-    /// <param name="centered">Center arround point</param>
+    /// <param name="centered">Center around point</param>
     public void Show(double x, double y, bool centered = false)
     {
       Show(new Point(x, y), centered);
@@ -1640,7 +1640,7 @@ namespace SilverFlow.Controls
     /// Shows the window in the specified coordinates, relative to the window's Host.
     /// </summary>
     /// <param name="point">Coordinates of the upper-left corner of the window.</param>
-    /// <param name="centered">Center arround point</param>
+    /// <param name="centered">Center around point</param>
     public void Show(Point point, bool centered = false, bool bringToFront = true)
     {
       CheckHost();
@@ -1860,7 +1860,7 @@ namespace SilverFlow.Controls
       CancelEventArgs e = new CancelEventArgs();
       OnClosing(e);
 
-      // On ApplicationExit, Close() cannot be cancelled
+      // On ApplicationExit, Close() cannot be canceled
       if (IsOpen && (!e.Cancel || isAppExit))
       {
         IsOpen = false;
@@ -1884,7 +1884,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Performs Screeshot action.
+    /// Performs Screenshot action.
     /// </summary>
     public virtual void Screenshot()
     {
@@ -1989,7 +1989,7 @@ namespace SilverFlow.Controls
     private void Application_Exit(object sender, EventArgs e)
     {
       isAppExit = true; //expecting FloatingWindowHost to close its hosted FloatingWindows
-      //Do not call Close here expliclity, since then Close handlers of FloatingWindows may get called at any order by the App which will cause problems if the FloatingWindowHost is also hosted in a FloatingWindow (nesting)
+      //Do not call Close here explicitly, since then Close handlers of FloatingWindows may get called at any order by the App which will cause problems if the FloatingWindowHost is also hosted in a FloatingWindow (nesting)
     }
 
     /// <summary>
@@ -2451,7 +2451,7 @@ namespace SilverFlow.Controls
         point = snapinController.SnapRectangle(rect);
         MoveWindow(point);
 
-        inertiaController.MoveToPoint(Position);
+        //inertiaController.MoveToPoint(point);
       }
     }
 
@@ -2972,7 +2972,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Checks the TransformGroup of the content root or creates it if necesary.
+    /// Checks the TransformGroup of the content root or creates it if necessary.
     /// </summary>
     private void InitializeContentRootTransformGroup()
     {
@@ -3033,7 +3033,7 @@ namespace SilverFlow.Controls
       var translateTransform = transformGroup.Children.OfType<TranslateTransform>().FirstOrDefault();
       var position = new Point(translateTransform.X, translateTransform.Y);
 
-      // Round coordinates to avoid blured window
+      // Round coordinates to avoid blurred window
       return position.Round();
     }
 
@@ -3053,7 +3053,7 @@ namespace SilverFlow.Controls
     }
 
     /// <summary>
-    /// Determines whether the mouse is over buttons in the the specified mouse position.
+    /// Determines whether the mouse is over buttons in the specified mouse position.
     /// </summary>
     /// <param name="position">The mouse position.</param>
     /// <param name="origin">Relative origin.</param>
@@ -3077,7 +3077,7 @@ namespace SilverFlow.Controls
     {
       if (contentRoot != null && !point.IsNotSet())
       {
-        // Round coordinates to avoid blured window
+        // Round coordinates to avoid blurred window
         double x = Math.Round(Math.Max(0, point.X));
         double y = Math.Round(Math.Max(0, point.Y));
 

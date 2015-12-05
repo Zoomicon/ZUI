@@ -8,8 +8,8 @@
     <ProjectGuid>{33CE99A3-8F43-421C-997A-4FF17FE1BE61}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FloatingWindowWPF</RootNamespace>
-    <AssemblyName>FloatingWindowWPF</AssemblyName>
+    <RootNamespace>FloatingWindowZUI</RootNamespace>
+    <AssemblyName>FloatingWindowZUI.WPF.Demo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -60,13 +60,19 @@
     <ManifestKeyFile>FloatingWindow.WPF.Demo_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>FloatingWindowWPF.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Compatibility, Version=1.0.5812.27317, Culture=neutral, processorArchitecture=MSIL">
@@ -206,8 +212,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="FloatingWindow.WPF.Demo_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -246,15 +252,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\FloatingWindow\FloatingWindow.WPF\FloatingWindow.WPF.csproj">
-      <Project>{7C67AC53-E3BC-4482-8DFB-4CBAA644D280}</Project>
+      <Project>{7c67ac53-e3bc-4482-8dfb-4cbaa644d280}</Project>
       <Name>FloatingWindow.WPF</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ZoomAndPan\ZoomAndPan.WPF\ZoomAndPan.WPF.csproj">
-      <Project>{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}</Project>
+      <Project>{468adede-6f5e-40c0-99c9-c6dac4fac934}</Project>
       <Name>ZoomAndPan.WPF</Name>
     </ProjectReference>
     <ProjectReference Include="..\FloatingWindowZUI.WPF\FloatingWindowZUI.WPF.csproj">
-      <Project>{B467CD19-5D56-46FF-B3CA-10FE778F36E9}</Project>
+      <Project>{b467cd19-5d56-46ff-b3ca-10fe778f36e9}</Project>
       <Name>FloatingWindowZUI.WPF</Name>
     </ProjectReference>
   </ItemGroup>

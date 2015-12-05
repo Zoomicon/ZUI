@@ -657,9 +657,12 @@ Version: 20151130
                     Padding="0"
                     Canvas.ZIndex="1"
                     FocusManager.IsFocusScope="True"
-                    >
+                    > 
                     <!-- Note: the special Margin is needed to fix a small line gap between window border and titlebar that shows up when zooming the UI -->
+ 
                     <!-- Note: must set Canvas.ZIndex above, since some controls (like Bing Maps) can overflow their content off their container - using a higher ZIndex than 0 ensures that such content doesn't draw over the Chrome (Titlebar) -->
+                    <!-- TODO: Check for alternative (see clip area attached property), maybe this Canvas.ZIndex is causing the issue that makes overlapping windows merge sometimes with each other -->
+                    
                     <!-- Note: changed to UseLayoutRounding="True" to help with GPU acceleration -->
 
                     <Grid Height="Auto" Width="Auto">
@@ -722,7 +725,11 @@ Version: 20151130
                         </Button>
                       </StackPanel>
 
-                      <Button x:Name="CloseButton" Style="{StaticResource CloseButtonStyle}" Grid.Column="5">
+                      <Button
+                        x:Name="CloseButton"
+                        Style="{StaticResource CloseButtonStyle}"
+                        Grid.Column="5"
+                        >
                         <ToolTipService.ToolTip>
                           <ToolTip Style="{StaticResource WindowButtonToolTipStyle}" Content="Close" />
                         </ToolTipService.ToolTip>
@@ -773,7 +780,11 @@ Version: 20151130
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="controls:BootstrapButton">
-          <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" RenderTransformOrigin="0.5,0.5">
+          <Grid
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}"
+            RenderTransformOrigin="0.5,0.5"
+            >
             <!--
             <Grid.RenderTransform>
               <CompositeTransform/>
@@ -819,7 +830,7 @@ Version: 20151130
                         <CubicEase EasingMode="EaseOut"/>
                       </DoubleAnimation.EasingFunction>
                     </DoubleAnimation>
-                     <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="RenderTransform.Children[3].Y" Storyboard.TargetName="PART_Arrow"/>
+                    <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="RenderTransform.Children[3].Y" Storyboard.TargetName="PART_Arrow"/>
                   </Storyboard>
                 </VisualState>
               </VisualStateGroup>
@@ -842,8 +853,8 @@ Version: 20151130
               </Ellipse.Fill>
             </Ellipse>
             <Path x:Name="PART_Arrow" Data="M27.671843,6 L31.333334,2 L35.02343,6 z"
-                      HorizontalAlignment="Center" Width="8" Height="4" Stretch="Fill" UseLayoutRounding="False"
-                      VerticalAlignment="Center" Fill="#FF686D76" RenderTransformOrigin="0.5,0.5">
+                  HorizontalAlignment="Center" Width="8" Height="4" Stretch="Fill" UseLayoutRounding="False"
+                  VerticalAlignment="Center" Fill="#FF686D76" RenderTransformOrigin="0.5,0.5">
               <Path.RenderTransform>
                 <TransformGroup>
                   <ScaleTransform />
@@ -1076,7 +1087,11 @@ Version: 20151130
               </Grid.RowDefinitions>
               <Border Grid.Row="0" Padding="2">
                 <Grid>
-                  <Image x:Name="PART_Thumbnail" Stretch="None" /> <!-- UseLayoutRounding="True" -->
+                  <Image
+                    x:Name="PART_Thumbnail"
+                    Stretch="None"
+                    UseLayoutRounding="False"
+                    />
                   <Border x:Name="PART_IconContainer" HorizontalAlignment="Center" VerticalAlignment="Center" />
                   <Border x:Name="PART_Overlay" Background="#01000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed" />
                 </Grid>

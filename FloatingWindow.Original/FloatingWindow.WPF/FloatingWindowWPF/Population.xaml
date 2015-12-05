@@ -1,0 +1,14 @@
+﻿<my:FloatingWindow x:Class="FloatingWindowWPF.Population"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:my="clr-namespace:SilverFlow.Controls;assembly=SilverFlow.Controls"
+        Width="350" Height="270" MinWidth="50" MinHeight="25" Title="City Population"
+        Loaded="Population_Loaded" IconText="City Population">
+
+    <Border x:Name="LayoutRoot" Margin="4,0,4,4">
+        <Grid>
+            <DataGrid Name="dataGrid" ColumnWidth="*" />
+        </Grid>
+    </Border>
+</my:FloatingWindow>

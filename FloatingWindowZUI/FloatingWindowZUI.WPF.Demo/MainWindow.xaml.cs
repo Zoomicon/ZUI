@@ -27,6 +27,10 @@ namespace FloatingWindowWPF
             FloatingWindow window = new FloatingWindow();
             window.Title = "Centered Window";
             window.IconText = "Centered Window";
+
+            //TODO: is this needed?
+            window.Scale = 1d / host.ZoomHost.ContentScale; //TODO: !!! don't use host.ContentScale, has bug and is always 1
+
             host.Add(window);
             window.Show();
         }
@@ -34,21 +38,14 @@ namespace FloatingWindowWPF
         private void ShowNewWindow_Click(object sender, RoutedEventArgs e)
         {
             FloatingWindow window = new FloatingWindow();
-            host.Add(window);
             string title = "Window " + nWindows++;
             window.Title = title;
             window.IconText = title;
 
-            window.Activated += (s, a) =>
-            {
-                Debug.WriteLine("Activated: {0}", window.IconText);
-            };
+            window.Activated += (s, a) => Debug.WriteLine("Activated: {0}", window.IconText);
+            window.Deactivated += (s, a) => Debug.WriteLine("Deactivated: {0}", window.IconText);
 
-            window.Deactivated += (s, a) =>
-            {
-                Debug.WriteLine("Deactivated: {0}", window.IconText);
-            };
-
+            host.Add(window);
             window.Show(startPoint);
             startPoint = startPoint.Add(20, 20);
         }
@@ -56,18 +53,11 @@ namespace FloatingWindowWPF
         private void ShowPopulation_Click(object sender, RoutedEventArgs e)
         {
             Population window = new Population();
+
+            window.Activated += (s, a) => Debug.WriteLine("Activated: {0}", window.IconText);
+            window.Deactivated += (s, a) => Debug.WriteLine("Deactivated: {0}", window.IconText);
+
             host.Add(window);
-
-            window.Activated += (s, a) =>
-            {
-                Debug.WriteLine("Activated: {0}", window.IconText);
-            };
-
-            window.Deactivated += (s, a) =>
-            {
-                Debug.WriteLine("Deactivated: {0}", window.IconText);
-            };
-
             window.Show(new Thickness(50, 100, 50, 150));
         }
 
@@ -80,10 +70,7 @@ namespace FloatingWindowWPF
                 detailsForm = new DetailsForm();
 
                 // Set detailsForm to null when the window is closed
-                detailsForm.Closed += (s, ea) =>
-                {
-                    detailsForm = null;
-                };
+                detailsForm.Closed += (s, ea) => detailsForm = null;
 
                 // Add the window to the FloatingWindowHost
                 host.Add(detailsForm);
@@ -98,18 +85,11 @@ namespace FloatingWindowWPF
         private void ShowWindowWithIcon_Click(object sender, RoutedEventArgs e)
         {
             WindowWithIcon window = new WindowWithIcon();
+
+            window.Activated += (s, a) => Debug.WriteLine("Activated: {0}", window.IconText);
+            window.Deactivated += (s, a) => Debug.WriteLine("Deactivated: {0}", window.IconText);
+
             host.Add(window);
-
-            window.Activated += (s, a) =>
-            {
-                Debug.WriteLine("Activated: {0}", window.IconText);
-            };
-
-            window.Deactivated += (s, a) =>
-            {
-                Debug.WriteLine("Deactivated: {0}", window.IconText);
-            };
-
             window.Show(200, 100);
         }
 
