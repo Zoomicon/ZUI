@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24627.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{27B0C3BF-B244-478B-90A3-B39BC997F285}"
 EndProject
@@ -45,6 +45,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingWindowZUI.Silverlight.Demo.Simple", "FloatingWindowZUI\FloatingWindowZUI.Silverlight.Demo.Simple\FloatingWindowZUI.Silverlight.Demo.Simple\FloatingWindowZUI.Silverlight.Demo.Simple.csproj", "{E0C38766-30EE-4ED8-82B8-CBDD2185FE39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan.Demo.TestZoom.Silverlight", "ZoomAndPan\ZoomAndPan.Demo.TestZoom\ZoomAndPan.Demo.TestZoom.Silverlight\ZoomAndPan.Demo.TestZoom.Silverlight.csproj", "{94616396-F9C8-4EB8-82A4-9B1C3994CFBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagrams", "Diagrams", "{BA5B2654-F07D-4EDD-8CED-6241214B13B0}"
+	ProjectSection(SolutionItems) = preProject
+		FloatingWindow\Source\FloatingWindow.cd = FloatingWindow\Source\FloatingWindow.cd
+		FloatingWindowZUI\Source\FloatingWindowZUI.cd = FloatingWindowZUI\Source\FloatingWindowZUI.cd
+		ZoomAndPan\Source\ZoomAndPan.cd = ZoomAndPan\Source\ZoomAndPan.cd
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
