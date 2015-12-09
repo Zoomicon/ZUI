@@ -106,7 +106,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FloatingWindowZUI.cd" />
+    <None Include="..\Source\FloatingWindowZUI.cd">
+      <Link>FloatingWindowZUI.cd</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

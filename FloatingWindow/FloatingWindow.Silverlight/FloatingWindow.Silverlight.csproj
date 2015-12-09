@@ -187,7 +187,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FloatingWindow.cd" />
+    <None Include="..\Source\FloatingWindow.cd">
+      <Link>FloatingWindow.cd</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
