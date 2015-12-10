@@ -246,7 +246,7 @@ namespace SilverFlow.Controls
         #region public object Title
 
         /// <summary>
-        /// Gets or sets title content that is displayed on the top of the window. 
+        /// Gets or sets title content that is displayed on the top of the window.
         /// Can contain any UI elements - not only a text.
         /// </summary>
         /// <value>
@@ -276,7 +276,7 @@ namespace SilverFlow.Controls
         #region public object Icon
 
         /// <summary>
-        /// Gets or sets content that is displayed as an icon of the window on the iconbar. 
+        /// Gets or sets content that is displayed as an icon of the window on the iconbar.
         /// </summary>
         /// <value>
         /// The content displayed as an icon of the window on the iconbar. The default is null.
@@ -894,8 +894,8 @@ namespace SilverFlow.Controls
         /// Gets or sets the minimum height constraint of a <see cref="T:System.Windows.FrameworkElement"/>.
         /// </summary>
         /// <value>he minimum height of the window.</value>
-        /// <returns>The minimum height of the window, in pixels. The default is 0. 
-        /// This value can be any value equal to or greater than 0. 
+        /// <returns>The minimum height of the window, in pixels. The default is 0.
+        /// This value can be any value equal to or greater than 0.
         /// However, <see cref="F:System.Double.PositiveInfinity"/> is not valid.</returns>
         public new double MinHeight
         {
@@ -1098,7 +1098,7 @@ namespace SilverFlow.Controls
         }
 
         /// <summary>
-        /// Handles the SizeChanged event of the ContentRoot control to update window position 
+        /// Handles the SizeChanged event of the ContentRoot control to update window position
         /// only once when the window is opened.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -1274,7 +1274,7 @@ namespace SilverFlow.Controls
         }
 
         /// <summary>
-        /// Builds the visual tree for the <see cref="FloatingWindow" /> control 
+        /// Builds the visual tree for the <see cref="FloatingWindow" /> control
         /// when a new template is applied.
         /// </summary>
         public override void OnApplyTemplate()
@@ -1416,7 +1416,7 @@ namespace SilverFlow.Controls
             }
 
             // Check that ScaleTransform exists in the TransformGroup
-            // ScaleTransform is used as a target in Storyboards 
+            // ScaleTransform is used as a target in Storyboards
             var scaleTransform = transformGroup.Children.OfType<ScaleTransform>().FirstOrDefault();
 
             if (scaleTransform == null)
@@ -1646,7 +1646,7 @@ namespace SilverFlow.Controls
         }
 
         /// <summary>
-        /// Subscribes to the events on the storyboards. 
+        /// Subscribes to the events on the storyboards.
         /// </summary>
         private void SubscribeToStoryBoardEvents()
         {
@@ -1661,7 +1661,7 @@ namespace SilverFlow.Controls
         }
 
         /// <summary>
-        /// Unsubscribe from events that are subscribed on the storyboards. 
+        /// Unsubscribe from events that are subscribed on the storyboards.
         /// </summary>
         private void UnsubscribeFromStoryBoardEvents()
         {
@@ -1758,7 +1758,7 @@ namespace SilverFlow.Controls
         /// <summary>
         /// Minimizes the window.
         /// </summary>
-        private void MinimizeWindow()
+        public void MinimizeWindow()
         {
             if (windowState != WindowState.Minimized)
             {
@@ -1865,7 +1865,7 @@ namespace SilverFlow.Controls
         }
 
         /// <summary>
-        /// Saves the actual size if it was not set explicitly set. 
+        /// Saves the actual size if it was not set explicitly set.
         /// E.g. the Width can be NaN, that means "Auto".
         /// </summary>
         private void SaveActualSize()
