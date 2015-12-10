@@ -79,24 +79,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientBin\System.Windows.Controls.Data.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientBin\System.Windows.Controls.Data.Input.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientBin\System.Windows.Controls.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientBin\System.Xml.Linq.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientBin\System.ComponentModel.DataAnnotations.zip" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientBin\System.Windows.Data.zip" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
