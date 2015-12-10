@@ -1,5 +1,5 @@
 //Filename: FloatingWindow.cs
-//Version: 20151130
+//Version: 20151210
 
 //#define BORDER_ONLY_AT_RESIZABLE //using BorderThickness instead to allow user to define when they want the border to be visible themselves
 
@@ -1691,10 +1691,7 @@ namespace SilverFlow.Controls
       if (bringToFront)
         SetTopmost();
 
-      Point position = point;
-
-      if (point.IsNotSet())
-        position = CenteredWindowPosition;
+      Point position = (point.IsNotSet()) ? CenteredWindowPosition : point;
 
       MoveWindow(position);
       this.SetVisible(true);
@@ -1715,7 +1712,7 @@ namespace SilverFlow.Controls
     /// <summary>
     /// Minimizes the window.
     /// </summary>
-    private void MinimizeWindow()
+    public void MinimizeWindow()
     {
       if (windowState != WindowState.Minimized)
       {
