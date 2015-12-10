@@ -98,10 +98,10 @@
     <Compile Include="FloatingWindow\WindowIcon.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Themes\generic.xaml">
+    <Page Include="Themes\generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Resource>
+    </Page>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />

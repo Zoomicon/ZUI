@@ -1,71 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SilverFlow.Controls.Controllers.InertiaController" Collapsed="true">
-    <Position X="7" Y="12" Width="1.5" />
+    <Position X="6.75" Y="9.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEEAJkAAAAAAAAAIABAAAAAAAEAAAACAIAAEA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Controllers\InertiaController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Controls.Controllers.InertialMotion" Collapsed="true">
-    <Position X="7" Y="14" Width="1.5" />
+  <Class Name="SilverFlow.Controls.Controllers.InertialMotion">
+    <Position X="6.75" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Controllers\InertialMotion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SilverFlow.Controls.Controllers.ResizeController" Collapsed="true">
-    <Position X="7" Y="7.75" Width="2.25" />
+    <Position X="6.75" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>CUgEBCAAAAAAAAABABEAAAQMABACSAAAAAECQAEKAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Controllers\ResizeController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SilverFlow.Controls.Controllers.SnapinController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="4" Width="1.5" />
+    <Position X="6.75" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>qAAQAIQAAAABAEAAAAAIAAEAAAACAAAAAAEAgAACICA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Controllers\SnapinController.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SilverFlow.Controls.Extensions.AnimationExtensions" Collapsed="true">
-    <Position X="12" Y="3" Width="2" />
+  <Class Name="SilverFlow.Controls.Extensions.AnimationExtensions">
+    <Position X="10.5" Y="8.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AACAAIAAAACEAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Extensions\AnimationExtensions.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Controls.Extensions.ControlExtensions" Collapsed="true">
-    <Position X="12" Y="0.75" Width="1.5" />
+  <Class Name="SilverFlow.Controls.Extensions.ControlExtensions">
+    <Position X="10.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAxJEAAAAAAAAAIAAAAAAABECAAAAAABABA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Extensions\ControlExtensions.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Controls.Extensions.GeometryExtensions" Collapsed="true">
-    <Position X="12" Y="1.5" Width="1.75" />
+  <Class Name="SilverFlow.Controls.Extensions.GeometryExtensions">
+    <Position X="10.5" Y="4.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AkIAAAgIAAAAABAgGAICAAAAEAAAAAAAAIAQAAIIEEA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Extensions\GeometryExtensions.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Controls.Extensions.MathExtensions" Collapsed="true">
-    <Position X="12" Y="2.25" Width="1.5" />
+  <Class Name="SilverFlow.Controls.Extensions.MathExtensions">
+    <Position X="10.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAEAAAAgAAAEAAAAAAAAAAEAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Extensions\MathExtensions.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Controls.ActiveWindowChangedEventArgs" Collapsed="true">
-    <Position X="9" Y="5.5" Width="2.5" />
+  <Class Name="SilverFlow.Controls.ActiveWindowChangedEventArgs">
+    <Position X="9.5" Y="14.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\FloatingWindow\ActiveWindowChangedEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SilverFlow.Controls.BootstrapButton" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
+    <Position X="6.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>MAAAAAAIAAAAAAAAAAAAAAACAAAAAABAAAIAAAAAAAI=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\FloatingWindow\BootstrapButton.cs</FileName>
@@ -100,7 +103,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SilverFlow.Controls.Iconbar" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="0.75" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>KASAgAQAAQZKACAAYAIA5AgOsIAARIBAABAKICiCARA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\FloatingWindow\IconBar.cs</FileName>
@@ -108,35 +111,35 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SilverFlow.Controls.WindowIcon" Collapsed="true">
-    <Position X="7" Y="2.25" Width="1.5" />
+    <Position X="6.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAARAQAlQAEAIAAIICABAgIAQAAQAAAAACgSQAAI=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\FloatingWindow\WindowIcon.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Geometry.Distance" Collapsed="true">
-    <Position X="10" Y="4.75" Width="1.5" />
+  <Class Name="SilverFlow.Geometry.Distance">
+    <Position X="8.5" Y="6" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAABAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Geometry\Distance.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Geometry.Trail" Collapsed="true">
-    <Position X="7" Y="3" Width="1.5" />
+  <Class Name="SilverFlow.Geometry.Trail">
+    <Position X="6.75" Y="8" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Geometry\Trail.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SilverFlow.Geometry.Vector2" Collapsed="true">
-    <Position X="10" Y="4" Width="1.5" />
+  <Class Name="SilverFlow.Geometry.Vector2">
+    <Position X="8.5" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAICAAAAACAAAAAAAAAAAGBAAAAAAAAIAgAAAAIAACA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Geometry\Vector2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SilverFlow.Controls.Helpers.BitmapHelper" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="15.5" Width="1.5" />
+    <Position X="8.75" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAIACAAAAAAggAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Helpers\BitmapHelper.cs</FileName>
@@ -144,7 +147,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SilverFlow.Controls.Helpers.LocalStorage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10" Y="0.75" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Helpers\LocalStorage.cs</FileName>
@@ -152,7 +155,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SilverFlow.Controls.Helpers.VisualHelper" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="12" Width="2.75" />
+    <Position X="10.5" Y="12.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Helpers\VisualHelper.cs</FileName>
@@ -160,49 +163,49 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="SilverFlow.Controls.Controllers.IResizableElement">
-    <Position X="7" Y="8.5" Width="1.5" />
+    <Position X="6.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAFQAAAAAgAAAAQEAAAQAAAAEAAAAQAAAAEBA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Controllers\IResizableElement.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SilverFlow.Controls.Controllers.ISnapinController">
-    <Position X="7" Y="4.75" Width="1.5" />
+    <Position X="6.75" Y="13.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>KAAQAIQAAAABAEAAAAAAAAEAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Controllers\ISnapinController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SilverFlow.Controls.Helpers.IBitmapHelper">
-    <Position X="7" Y="16.25" Width="1.5" />
+    <Position X="8.75" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Helpers\IBitmapHelper.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SilverFlow.Controls.Helpers.ILocalStorage">
-    <Position X="10" Y="1.5" Width="1.5" />
+    <Position X="8.5" Y="1.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Helpers\ILocalStorage.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SilverFlow.Controls.Helpers.IVisualHelper">
-    <Position X="7" Y="12.75" Width="1.5" />
+    <Position X="10.5" Y="13" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Helpers\IVisualHelper.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SilverFlow.Controls.Enums.ResizeAnchor">
-    <Position X="12" Y="4" Width="1.5" />
+    <Position X="8.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAIAAAAABAAAAAQAAAAAAAIAAAACACAAAEAAEA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Enums\ResizeAnchor.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="SilverFlow.Controls.Enums.WindowAction">
-    <Position X="12" Y="6.25" Width="1.5" />
+    <Position X="8.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAA=</HashCode>
       <FileName>C:\Users\George\Dropbox\ClipFlairDev\SourcePackages\ZUI\FloatingWindow\Source\Enums\WindowAction.cs</FileName>
